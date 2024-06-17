@@ -12,7 +12,7 @@ export async function getUser(){
   }
   const response = await fetch(`${process.env.REACT_APP_HOST}/600/users/${browserData.cbid}`, requestOptions);
   if(!response.ok){
-    throw { message: response.statusText, status: response.status};
+    throw { message: response.statusText, status: response.status}; //eslint-disable-line
   }
   const data = await response.json();
   return data;
@@ -25,7 +25,7 @@ export async function getUserOrders(){
       headers: {"Content-Type": "application/json", Authorization: `Bearer ${browserData.token}`}
   });
   if(!response.ok){
-    throw { message: response.statusText, status: response.status};
+    throw { message: response.statusText, status: response.status};//eslint-disable-line
   }
   const data = await response.json();
   return data;
@@ -50,7 +50,7 @@ export async function createOrder(cartList, total, user){
   }
   const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders`, requestOptions);
   if(!response.ok){
-    throw { message: response.statusText, status: response.status};
+    throw { message: response.statusText, status: response.status};//eslint-disable-line
   }
   const data = await response.json();
   return data;
