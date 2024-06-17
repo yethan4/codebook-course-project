@@ -3,7 +3,6 @@ import { HomePage, ProductsList, ProductDetail, Login, Register, CartPage, Order
 import { ProtectedRoute } from "./ProtectedRoute";
 
 export const AllRoutes = () => {
-  const token = false;
 
   return (
     <>
